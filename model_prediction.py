@@ -4,9 +4,10 @@ from torchvision.models import ResNet18_Weights
 from PIL import Image
 from torchvision.datasets import ImageFolder
 import torch.nn.functional as F
+import sys
 
 # ======== CONFIGURATION ========
-image_path = "PlantVillage/Tomato__Target_Spot/0b0e5158-180e-487c-b4a7-1ee496473147___Com.G_TgS_FL 9932.JPG"
+image_path = sys.argv[1]
 model_weights_path = "plant_model.pth"
 num_classes = 15
 class_names = ImageFolder("dataset_split/train").classes  # Loads class names from folders
